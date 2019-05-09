@@ -1,0 +1,24 @@
+﻿@model IEnumerable<WorkHelper.BLL.DTO.EmployeeDTO>
+
+@{
+    ViewBag.Title = "Сотрудники";
+}
+
+<h2>Сотрудники</h2>
+
+<table class="table table-condensed table-striped">
+    <thead>
+        <tr>
+            <th>Ф.И.О.</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.FullName</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
